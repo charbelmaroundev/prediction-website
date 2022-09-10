@@ -49,3 +49,42 @@ img {
     justify-content: space-between;
     margin: 2rem 0;
 }
+
+@media (max-width: 600px) {
+    html {
+        font-size: 56.25%;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 50%;
+    }
+
+    .main {
+        margin: 0 2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    html {
+        font-size: 43.75%;
+    }
+
+    .form {
+        flex-direction: column;
+        margin: 2rem 0;
+    }
+
+    .input,
+    .btn {
+        margin: 1rem 0;
+        width: 100%;
+    }
+
+    .age p,
+    .gender p,
+    .nationality p {
+        margin: 1rem 0;
+    }
+}
