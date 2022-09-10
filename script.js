@@ -9,3 +9,8 @@ const nationality2El = document.getElementById('nationality2')
 fetch('https://dog.ceo/api/breeds/image/random')
     .then(response => response.json())
     .then(data => imgEl.src = data.message);
+
+
+btnEl.addEventListener('click', (e) => {
+    e.preventDefault()
+})
