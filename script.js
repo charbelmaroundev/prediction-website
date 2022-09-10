@@ -22,4 +22,11 @@ btnEl.addEventListener('click', (e) => {
         .then(response => response.json())
         .then(data => ageEl.innerHTML = data.age);
 
+    fetch(`https://api.nationalize.io/?name=${inputEl.value}`)
+        .then(response => response.json())
+        .then(data => nationality1El.innerHTML = data.country['0'].country_id);
+
+    fetch(`https://api.nationalize.io/?name=${inputEl.value}`)
+        .then(response => response.json())
+        .then(data => nationality2El.innerHTML = data.country['1'].country_id);
 })
