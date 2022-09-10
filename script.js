@@ -13,4 +13,13 @@ fetch('https://dog.ceo/api/breeds/image/random')
 
 btnEl.addEventListener('click', (e) => {
     e.preventDefault()
+
+    fetch(`https://api.genderize.io/?name=${inputEl.value}`)
+        .then(response => response.json())
+        .then(data => genderEl.innerHTML = data.gender);
+
+    fetch(`https://api.agify.io/?name=${inputEl.value}`)
+        .then(response => response.json())
+        .then(data => ageEl.innerHTML = data.age);
+
 })
